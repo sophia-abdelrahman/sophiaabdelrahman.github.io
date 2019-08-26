@@ -5,8 +5,36 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+		
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+			  // Prevent default anchor click behavior
+			  event.preventDefault();
+		
+			  // Store hash
+			  var hash = this.hash;
+		
+			  // Using jQuery's animate() method to add smooth page scroll
+			  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			  $('html, body').animate({
+				scrollTop: $(hash).offset().top
+			  }, 800, function(){
+		
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			  });
+			} // End if
+		  });
+		});
+		</script>
+<html>
 	<head>
-		<title>Retrospect by TEMPLATED</title>
+		<title>Portfolio - Sophia Abdelrahman</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -18,7 +46,7 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1><a href="index.html">Retrospect</a></h1>
+				<h1>Sophia Abdelrahman</a></h1>
 				<a href="#nav">Menu</a>
 			</header>
 
@@ -26,18 +54,19 @@
 			<nav id="nav">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li><i><small><font color="grey">More coming soon!</li></i></small></font></a></li>
+					<!--<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li> -->
 				</ul>
 			</nav>
 
 		<!-- Banner -->
 			<section id="banner">
-				<i class="icon fa-diamond"></i>
-				<h2>Etiam adipiscing</h2>
-				<p>Magna feugiat lorem dolor egestas</p>
+				<i class="icon fa-bar-chart-o"></i>
+				<h2>Portfolio</h2>
+				<!--<p>Projects</p>-->
 				<ul class="actions">
-					<li><a href="#" class="button big special">Learn More</a></li>
+					<li><a href="#one" class="button big special">Projects</a></li>
 				</ul>
 			</section>
 
@@ -47,11 +76,11 @@
 					<article class="feature left">
 						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
 						<div class="content">
-							<h2>Integer vitae libero acrisus egestas placerat  sollicitudin</h2>
-							<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
+							<h2>elections results map</h2>
+							<p>Incorporating GIS shapefile and precinct-aggregated voting data in R to create an interactive map of all bipartisan votes in the 2018 US senate race in Massachusetts</p>
 							<ul class="actions">
 								<li>
-									<a href="#" class="button alt">More</a>
+									<a href="https://github.com/sophiaabdelrahman/elections-map" target="_blank" class="button alt">More</a>
 								</li>
 							</ul>
 						</div>
@@ -59,11 +88,11 @@
 					<article class="feature right">
 						<span class="image"><img src="images/pic02.jpg" alt="" /></span>
 						<div class="content">
-							<h2>Integer vitae libero acrisus egestas placerat  sollicitudin</h2>
-							<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
+							<h2>Visualizing survey data</h2>
+							<p>Visualizing likert-scale responses to survey using Tableau (Desktop and Prep), including response percentages, relative averages, and null hypothesis testing for significant differences from previous survey responses & between demographic groups</p>
 							<ul class="actions">
 								<li>
-									<a href="#" class="button alt">More</a>
+									<a href="https://github.com/sophiaabdelrahman/blocks-viz" target="_blank" class="button alt">More</a>
 								</li>
 							</ul>
 						</div>
@@ -71,7 +100,7 @@
 				</div>
 			</section>
 
-		<!-- Two -->
+		<!-- Two 
 			<section id="two" class="wrapper special">
 				<div class="inner">
 					<header class="major narrow">
@@ -94,7 +123,7 @@
 				</div>
 			</section>
 
-		<!-- Three -->
+		 Three
 			<section id="three" class="wrapper style3 special">
 				<div class="inner">
 					<header class="major narrow	">
@@ -106,15 +135,15 @@
 					</ul>
 				</div>
 			</section>
-
+		-->
 		<!-- Four -->
 			<section id="four" class="wrapper style2 special">
 				<div class="inner">
 					<header class="major narrow">
-						<h2>Get in touch</h2>
-						<p>Ipsum dolor tempus commodo adipiscing</p>
+						<h2>Contact</h2>
+						<p>Let's get in touch!</p>
 					</header>
-					<form action="#" method="POST">
+					<form action="mailto:sabdelra@wellesley.edu" method="POST">
 						<div class="container 75%">
 							<div class="row uniform 50%">
 								<div class="6u 12u$(xsmall)">
@@ -140,24 +169,26 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="#" class="icon fa-facebook">
+						<!--<li><a href="#" class="icon fa-facebook">
 							<span class="label">Facebook</span>
 						</a></li>
 						<li><a href="#" class="icon fa-twitter">
 							<span class="label">Twitter</span>
 						</a></li>
-						<li><a href="#" class="icon fa-instagram">
-							<span class="label">Instagram</span>
+					-->
+						<li><a href="https://github.com/sophiaabdelrahman" class="icon fa-github">
+							<span class="label">Github</span>
 						</a></li>
-						<li><a href="#" class="icon fa-linkedin">
+						<li><a href="https://www.linkedin.com/in/sophia-abdelrahman-28ab43127/" class="icon fa-linkedin">
 							<span class="label">LinkedIn</span>
 						</a></li>
 					</ul>
-					<ul class="copyright">
+					<!--<ul class="copyright">
 						<li>&copy; Untitled.</li>
 						<li>Images: <a href="http://unsplash.com">Unsplash</a>.</li>
 						<li>Design: <a href="http://templated.co">TEMPLATED</a>.</li>
 					</ul>
+				-->
 				</div>
 			</footer>
 
